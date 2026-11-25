@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historia | DIBUJO·TÉCNICO — Del Arte Clásico a la Era CAD</title>
+  <meta name="description" content="Evolución histórica del dibujo técnico desde Egipto y Euclides, Brunelleschi y Leonardo da Vinci, Gaspard Monge hasta los sistemas CAD/BIM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="blueprint-grid" data-page="historia">
+  <div class="sheet-margin-top" aria-hidden="true">
+    <span class="coord-marker">A1 · ISO 5457</span>
+    <span class="coord-marker">LÁMINA 04 · HISTORIA Y ARTE</span>
+    <span class="coord-marker">3000 a.C. — SIGLO XXI</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <span class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+            <rect x="2" y="2" width="32" height="32" rx="3" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="6" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="2.5" stroke="currentColor" stroke-width="1.5" />
+            <polygon points="23,12 31,14.5 31,21.5 23,24" stroke="currentColor" stroke-width="1.5" />
+            <line x1="5" y1="18" x2="33" y2="18" stroke="var(--accent-amber)" stroke-width="1" stroke-dasharray="3 2" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">DIBUJO·TÉCNICO</span>
+          <span class="brand-sub mono">PLANIFICACIÓN &amp; CAD</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link" data-page="inicio"><span class="nav-idx mono">01.</span>Inicio</a></li>
+        <li><a href="fundamentos.html" class="nav-link" data-page="fundamentos"><span class="nav-idx mono">02.</span>Fundamentos</a></li>
+        <li><a href="galeria.html" class="nav-link" data-page="galeria"><span class="nav-idx mono">03.</span>Galería</a></li>
+        <li><a href="historia.html" class="nav-link active" data-page="historia"><span class="nav-idx mono">04.</span>Historia</a></li>
+        <li><a href="aplicaciones.html" class="nav-link" data-page="aplicaciones"><span class="nav-idx mono">05.</span>Aplicaciones</a></li>
+        <li><a href="escalas.html" class="nav-link" data-page="escalas"><span class="nav-idx mono">06.</span>Escalas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle mono" id="themeToggle" aria-label="Alternar tema">
+          <span class="theme-dot" aria-hidden="true"></span>
+          <span id="themeLabel">CAD DARK</span>
+        </button>
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="breadcrumb mono">
+          <a href="index.html">01. Inicio</a><span>/</span><span>04. Historia del Arte y del Dibujo Técnico</span>
+        </div>
+        <div class="banner-split">
+          <div class="reveal">
+            <span class="section-eyebrow mono">// EVOLUCIÓN HISTÓRICA</span>
+            <h1 class="section-title">Del Arte Clásico a la Precisión CAD</h1>
+            <p class="section-lead">
+              El dibujo técnico nació de la convergencia entre la observación artística y la geometría matemática. Desde las tablillas mesopotámicas hasta los modelos BIM actuales, cada época aportó un método para dominar el espacio.
+            </p>
+          </div>
+          <div class="media-frame card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <img src="assets/img/history-renaissance.jpg" alt="Transición del estudio renacentista al plano CAD moderno" class="media-img" />
+            <div class="media-caption mono">
+              <span>FIG. 04 · RENACIMIENTO VS. CAD CONTEMPORÁNEO</span>
+              <span>S. XV – XXI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow mono">// CRONOLOGÍA INTERACTIVA</span>
+          <h2 class="section-title">Cuatro Hitos Fundamentales</h2>
+        </div>
+
+        <div class="timeline-wrapper reveal">
+          <div class="timeline-nav" role="tablist" aria-label="Hitos históricos del dibujo técnico">
+            <button type="button" class="timeline-step active" data-era="antiguedad" role="tab" aria-selected="true">
+              <span class="step-year mono">3000 a.C. – 300 a.C.</span>
+              <span class="step-name">Antigüedad Clásica</span>
+            </button>
+            <button type="button" class="timeline-step" data-era="renacimiento" role="tab" aria-selected="false">
+              <span class="step-year mono">SIGLOS XV – XVI</span>
+              <span class="step-name">Renacimiento</span>
+            </button>
+            <button type="button" class="timeline-step" data-era="industrial" role="tab" aria-selected="false">
+              <span class="step-year mono">1795 – REV. INDUSTRIAL</span>
+              <span class="step-name">Gaspard Monge</span>
+            </button>
+            <button type="button" class="timeline-step" data-era="digital" role="tab" aria-selected="false">
+              <span class="step-year mono">SIGLO XX – ACTUALIDAD</span>
+              <span class="step-name">Era ISO, CAD y BIM</span>
+            </button>
+          </div>
+
+          <div class="timeline-detail card-blueprint" id="timelineDetail"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="comparison-block" style="margin-top:0;">
+          <div class="comparison-header reveal">
+            <span class="mono comparison-tag">SEGMENTO COMPARATIVO</span>
+            <h2>Representación Artística Libre vs. Representación Técnica Normalizada</h2>
+          </div>
+
+          <div class="comparison-grid">
+            <article class="comp-card card-blueprint reveal">
+              <div class="corner-mark tl" aria-hidden="true"></div>
+              <div class="corner-mark br" aria-hidden="true"></div>
+              <div class="comp-svg-box">
+                <svg viewBox="0 0 320 190" class="blueprint-svg" aria-label="Boceto artístico en perspectiva cónica con sombreado">
+                  <line x1="15" y1="85" x2="305" y2="85" stroke="var(--text-muted)" stroke-width="0.8" stroke-dasharray="2 3" />
+                  <circle cx="45" cy="85" r="3" fill="var(--accent-amber)" />
+                  <circle cx="275" cy="85" r="3" fill="var(--accent-amber)" />
+                  <line x1="45" y1="85" x2="160" y2="38" stroke="var(--accent-amber)" stroke-width="0.7" opacity="0.4" />
+                  <line x1="275" y1="85" x2="160" y2="38" stroke="var(--accent-amber)" stroke-width="0.7" opacity="0.4" />
+                  <line x1="45" y1="85" x2="160" y2="152" stroke="var(--accent-amber)" stroke-width="0.7" opacity="0.4" />
+                  <line x1="275" y1="85" x2="160" y2="152" stroke="var(--accent-amber)" stroke-width="0.7" opacity="0.4" />
+                  <polygon points="105,65 160,38 160,152 105,125" fill="var(--surface-tint)" stroke="var(--text-primary)" stroke-width="1.8" />
+                  <polygon points="160,38 225,68 225,122 160,152" fill="var(--surface-tint-2)" stroke="var(--text-primary)" stroke-width="1.8" />
+                  <path d="M 160 152 L 245 162 L 265 142 L 225 122 Z" fill="var(--text-muted)" opacity="0.22" />
+                  <g stroke="var(--text-primary)" stroke-width="0.9" opacity="0.5">
+                    <line x1="170" y1="55" x2="188" y2="135" />
+                    <line x1="180" y1="58" x2="198" y2="130" />
+                    <line x1="190" y1="62" x2="208" y2="126" />
+                    <line x1="202" y1="66" x2="218" y2="122" />
+                  </g>
+                  <text x="16" y="176" class="cajetin-sub mono">PERSPECTIVA CÓNICA · CLAROSCURO SUBJETIVO</text>
+                </svg>
+              </div>
+              <div class="comp-body">
+                <span class="mono comp-badge">EXPRESIÓN ARTÍSTICA</span>
+                <h4>Intención Estética y Perceptiva</h4>
+                <ul>
+                  <li>Busca evocar emoción, atmósfera y volumen mediante luz y sombra (claroscuro).</li>
+                  <li>Utiliza perspectiva cónica con puntos de fuga que alteran las dimensiones reales según la distancia.</li>
+                  <li>No sigue escalas estrictas ni simbología universal; prima el estilo del autor.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="comp-card card-blueprint reveal">
+              <div class="corner-mark tl" aria-hidden="true"></div>
+              <div class="corner-mark br" aria-hidden="true"></div>
+              <div class="comp-svg-box">
+                <svg viewBox="0 0 320 190" class="blueprint-svg" aria-label="Plano normalizado ISO">
+                  <rect x="42" y="38" width="90" height="62" fill="var(--surface-tint)" class="draw-line draw-thick" />
+                  <circle cx="87" cy="69" r="15" fill="none" class="draw-line" />
+                  <line x1="65" y1="69" x2="109" y2="69" class="draw-axis" />
+                  <line x1="87" y1="47" x2="87" y2="91" class="draw-axis" />
+                  <rect x="175" y="38" width="52" height="62" fill="var(--surface-tint)" class="draw-line draw-thick" />
+                  <line x1="175" y1="54" x2="227" y2="54" class="draw-hidden" />
+                  <line x1="175" y1="84" x2="227" y2="84" class="draw-hidden" />
+                  <line x1="168" y1="69" x2="234" y2="69" class="draw-axis" />
+                  <line x1="132" y1="38" x2="175" y2="38" class="proj-ray" />
+                  <line x1="132" y1="100" x2="175" y2="100" class="proj-ray" />
+                  <line x1="42" y1="122" x2="132" y2="122" class="dim-line" />
+                  <text x="87" y="137" class="dim-text mono" text-anchor="middle">90 ±0.05</text>
+                  <line x1="248" y1="38" x2="248" y2="100" class="dim-line" />
+                  <text x="268" y="72" class="dim-text mono">62</text>
+                  <text x="16" y="176" class="cajetin-sub mono">SISTEMA DIÉDRICO · COTAS Y TOLERANCIAS ISO</text>
+                </svg>
+              </div>
+              <div class="comp-body">
+                <span class="mono comp-badge badge-blue">NORMATIVA TÉCNICA</span>
+                <h4>Precisión Objetiva y Fabricación</h4>
+                <ul>
+                  <li>Elimina ambigüedades mediante trazos normalizados ISO 128 (vistas, ocultas y ejes).</li>
+                  <li>Conserva medidas reales mediante proyecciones ortogonales y escalas exactas.</li>
+                  <li>Incluye cotas, tolerancias geométricas (GD&amp;T), acabados y cajetín técnico.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cajetin-sheet">
+        <div class="cajetin-cell cell-main">
+          <span class="cajetin-k mono">TÍTULO DEL PROYECTO</span>
+          <strong class="cajetin-v">DIBUJO TÉCNICO · PORTAL EDUCATIVO E INGENIERÍA</strong>
+          <p class="cajetin-desc">Lámina 04: Historia del arte, geometría descriptiva y comparativa técnica.</p>
+        </div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">AUTOR / ESTUDIO</span><span class="cajetin-v mono">DPTO. DISEÑO &amp; CAD</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">ESCALA GENERAL</span><span class="cajetin-v mono">CRONOLÓGICA</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">FECHA / REV.</span><span class="cajetin-v mono">2026-11 · REV 05</span></div>
+        <div class="cajetin-cell cell-proj">
+          <span class="cajetin-k mono">SISTEMA DE PROYECCIÓN</span>
+          <div class="proj-symbol-row">
+            <svg viewBox="0 0 60 28" width="54" height="24" aria-label="Símbolo ISO-E">
+              <polygon points="6,8 22,3 22,25 6,20" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <span class="mono">ISO-E (EUROPEO)</span>
+          </div>
+        </div>
+        <div class="cajetin-cell cell-links">
+          <span class="cajetin-k mono">ÍNDICE DE LÁMINAS (PÁGINAS)</span>
+          <nav class="footer-nav mono" aria-label="Enlaces rápidos">
+            <a href="index.html">01. Inicio</a>
+            <a href="fundamentos.html">02. Fundamentos</a>
+            <a href="galeria.html">03. Galería</a>
+            <a href="historia.html">04. Historia</a>
+            <a href="aplicaciones.html">05. Aplicaciones</a>
+            <a href="escalas.html">06. Escalas</a>
+          </nav>
+        </div>
+        <div class="cajetin-cell cell-code">
+          <span class="cajetin-k mono">CÓDIGO DE PLANO</span>
+          <span class="cajetin-v mono">DT-A1-04-HIST</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

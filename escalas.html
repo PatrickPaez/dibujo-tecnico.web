@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escalas y Acotación | DIBUJO·TÉCNICO — Calculadora ISO 5455</title>
+  <meta name="description" content="Calculadora rápida de escalas de reducción, natural y ampliación según ISO 5455 y guía técnica de sistemas de acotación ISO 129-1." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="blueprint-grid" data-page="escalas">
+  <div class="sheet-margin-top" aria-hidden="true">
+    <span class="coord-marker">A1 · ISO 5457</span>
+    <span class="coord-marker">LÁMINA 06 · ESCALAS Y ACOTACIÓN</span>
+    <span class="coord-marker">NORMA ISO 5455 / ISO 129-1</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <span class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+            <rect x="2" y="2" width="32" height="32" rx="3" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="6" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="2.5" stroke="currentColor" stroke-width="1.5" />
+            <polygon points="23,12 31,14.5 31,21.5 23,24" stroke="currentColor" stroke-width="1.5" />
+            <line x1="5" y1="18" x2="33" y2="18" stroke="var(--accent-amber)" stroke-width="1" stroke-dasharray="3 2" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">DIBUJO·TÉCNICO</span>
+          <span class="brand-sub mono">PLANIFICACIÓN &amp; CAD</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link" data-page="inicio"><span class="nav-idx mono">01.</span>Inicio</a></li>
+        <li><a href="fundamentos.html" class="nav-link" data-page="fundamentos"><span class="nav-idx mono">02.</span>Fundamentos</a></li>
+        <li><a href="galeria.html" class="nav-link" data-page="galeria"><span class="nav-idx mono">03.</span>Galería</a></li>
+        <li><a href="historia.html" class="nav-link" data-page="historia"><span class="nav-idx mono">04.</span>Historia</a></li>
+        <li><a href="aplicaciones.html" class="nav-link" data-page="aplicaciones"><span class="nav-idx mono">05.</span>Aplicaciones</a></li>
+        <li><a href="escalas.html" class="nav-link active" data-page="escalas"><span class="nav-idx mono">06.</span>Escalas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle mono" id="themeToggle" aria-label="Alternar tema">
+          <span class="theme-dot" aria-hidden="true"></span>
+          <span id="themeLabel">CAD DARK</span>
+        </button>
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="breadcrumb mono">
+          <a href="index.html">01. Inicio</a><span>/</span><span>06. Calculadora de Escalas y Acotación</span>
+        </div>
+        <div class="section-header" style="margin-bottom:0;">
+          <span class="section-eyebrow mono">// HERRAMIENTAS DE CÁLCULO · ISO 5455</span>
+          <h1 class="section-title">Escalas Normalizadas y Reglas de Acotación</h1>
+          <p class="section-lead">
+            La escala es la relación matemática entre la dimensión representada en el dibujo y la dimensión real del objeto (<code class="mono">E = Dibujo : Realidad</code>). Calcula medidas al instante y consulta los sistemas de acotación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Calculadora Rápida de Escalas -->
+        <div class="scale-calc card-blueprint reveal" id="scaleCalculator" style="margin-top:0;">
+          <div class="corner-mark tl" aria-hidden="true"></div>
+          <div class="corner-mark br" aria-hidden="true"></div>
+
+          <div class="calc-header">
+            <div>
+              <span class="mono comparison-tag">HERRAMIENTA INTERACTIVA · ISO 5455</span>
+              <h2>Calculadora Rápida de Escalas</h2>
+              <p>Convierte al instante medidas reales a dimensiones sobre el plano según escalas de reducción, natural o ampliación.</p>
+            </div>
+            <div class="scale-type-badge mono" id="scaleTypeBadge">ESCALA DE REDUCCIÓN</div>
+          </div>
+
+          <div class="calc-grid">
+            <div class="calc-controls">
+              <div class="field-group">
+                <label class="mono" for="scalePresets">Escala normalizada</label>
+                <div class="preset-chips" id="scalePresets">
+                  <button type="button" class="preset-chip mono" data-num="1" data-den="100">1:100</button>
+                  <button type="button" class="preset-chip active mono" data-num="1" data-den="50">1:50</button>
+                  <button type="button" class="preset-chip mono" data-num="1" data-den="20">1:20</button>
+                  <button type="button" class="preset-chip mono" data-num="1" data-den="5">1:5</button>
+                  <button type="button" class="preset-chip mono" data-num="1" data-den="1">1:1</button>
+                  <button type="button" class="preset-chip mono" data-num="2" data-den="1">2:1</button>
+                  <button type="button" class="preset-chip mono" data-num="5" data-den="1">5:1</button>
+                </div>
+              </div>
+
+              <div class="calc-inputs-row">
+                <div class="field-group">
+                  <label class="mono" for="scaleNum">Plano (E)</label>
+                  <input type="number" id="scaleNum" min="0.1" step="any" value="1" class="tech-input mono" />
+                </div>
+                <span class="ratio-sep mono">:</span>
+                <div class="field-group">
+                  <label class="mono" for="scaleDen">Real (R)</label>
+                  <input type="number" id="scaleDen" min="0.1" step="any" value="50" class="tech-input mono" />
+                </div>
+                <div class="field-group">
+                  <label class="mono" for="realMeasure">Medida real</label>
+                  <div class="input-unit-wrap">
+                    <input type="number" id="realMeasure" min="0" step="any" value="4500" class="tech-input mono" />
+                    <select id="measureUnit" class="tech-select mono" aria-label="Unidad de medida real">
+                      <option value="mm" selected>mm</option>
+                      <option value="cm">cm</option>
+                      <option value="m">m</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <span class="mono result-label">MEDIDA EN EL PLANO (PAPEL)</span>
+              <div class="result-value mono" id="drawingResult">90.00 mm</div>
+              <div class="result-sub mono" id="drawingResultCm">= 9.00 cm · Factor k = 0.020</div>
+              <div class="scale-ruler" aria-hidden="true">
+                <div class="ruler-bar" id="rulerBar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clasificación de Escalas -->
+        <div class="pillars-grid" style="margin-top:2.5rem;">
+          <article class="pillar-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <span class="pillar-code mono" style="align-self:flex-start; margin-bottom:0.8rem;">1 : N (E &lt; R)</span>
+            <h3>Escala de Reducción</h3>
+            <p>El dibujo es menor que la realidad. Recomendada en arquitectura, topografía y grandes conjuntos industriales: <strong>1:2, 1:5, 1:10, 1:20, 1:50, 1:100, 1:500</strong>.</p>
+          </article>
+
+          <article class="pillar-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <span class="pillar-code mono" style="align-self:flex-start; margin-bottom:0.8rem;">1 : 1 (E = R)</span>
+            <h3>Escala Natural</h3>
+            <p>Las dimensiones del trazado coinciden exactamente con las del objeto físico. Ideal para piezas mecánicas medianas y plantillas de verificación directa en taller.</p>
+          </article>
+
+          <article class="pillar-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <span class="pillar-code mono" style="align-self:flex-start; margin-bottom:0.8rem;">N : 1 (E &gt; R)</span>
+            <h3>Escala de Ampliación</h3>
+            <p>El objeto se representa mayor que su tamaño real para apreciar detalles diminutos (relojería, microelectrónica, engranajes finos): <strong>2:1, 5:1, 10:1, 20:1, 50:1</strong>.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SISTEMAS DE ACOTACIÓN ISO 129-1 -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow mono">// NORMA ISO 129-1</span>
+          <h2 class="section-title">Sistemas de Acotación Normalizados</h2>
+          <p class="section-lead">Recuerda: la cifra de cota siempre expresa la <strong>medida real</strong> de la pieza, independientemente de la escala del dibujo.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <article class="comp-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <div class="comp-svg-box">
+              <svg viewBox="0 0 320 150" class="blueprint-svg" aria-label="Acotación en serie">
+                <rect x="40" y="32" width="240" height="48" fill="var(--surface-tint)" class="draw-line draw-thick" />
+                <line x1="115" y1="32" x2="115" y2="80" class="draw-line" />
+                <line x1="205" y1="32" x2="205" y2="80" class="draw-line" />
+                <line x1="40" y1="106" x2="280" y2="106" class="dim-line" />
+                <line x1="40" y1="80" x2="40" y2="114" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="115" y1="80" x2="115" y2="114" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="205" y1="80" x2="205" y2="114" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="280" y1="80" x2="280" y2="114" stroke="var(--accent-amber)" stroke-width="1" />
+                <text x="77" y="100" class="dim-text mono" text-anchor="middle">25</text>
+                <text x="160" y="100" class="dim-text mono" text-anchor="middle">30</text>
+                <text x="242" y="100" class="dim-text mono" text-anchor="middle">25</text>
+              </svg>
+            </div>
+            <div class="comp-body">
+              <span class="mono comp-badge">ACOTACIÓN EN SERIE (CADENA)</span>
+              <h4>Cotas consecutivas</h4>
+              <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">Cada elemento se acota respecto al contiguo. Útil cuando la distancia entre tramos importa más que la longitud total, aunque acumula tolerancias.</p>
+            </div>
+          </article>
+
+          <article class="comp-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <div class="comp-svg-box">
+              <svg viewBox="0 0 320 150" class="blueprint-svg" aria-label="Acotación en paralelo">
+                <rect x="40" y="24" width="240" height="44" fill="var(--surface-tint)" class="draw-line draw-thick" />
+                <line x1="115" y1="24" x2="115" y2="68" class="draw-line" />
+                <line x1="205" y1="24" x2="205" y2="68" class="draw-line" />
+                <line x1="40" y1="68" x2="40" y2="136" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="115" y1="68" x2="115" y2="94" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="205" y1="68" x2="205" y2="114" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="280" y1="68" x2="280" y2="136" stroke="var(--accent-amber)" stroke-width="1" />
+                <line x1="40" y1="88" x2="115" y2="88" class="dim-line" />
+                <line x1="40" y1="108" x2="205" y2="108" class="dim-line" />
+                <line x1="40" y1="128" x2="280" y2="128" class="dim-line" />
+                <text x="77" y="84" class="dim-text mono" text-anchor="middle">25</text>
+                <text x="160" y="104" class="dim-text mono" text-anchor="middle">55</text>
+                <text x="242" y="124" class="dim-text mono" text-anchor="middle">80</text>
+              </svg>
+            </div>
+            <div class="comp-body">
+              <span class="mono comp-badge badge-blue">ACOTACIÓN EN PARALELO</span>
+              <h4>Origen de referencia común</h4>
+              <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">Todas las cotas parten de un mismo plano de referencia (datum), evitando la acumulación de errores en mecanizado CNC y metrología.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cajetin-sheet">
+        <div class="cajetin-cell cell-main">
+          <span class="cajetin-k mono">TÍTULO DEL PROYECTO</span>
+          <strong class="cajetin-v">DIBUJO TÉCNICO · PORTAL EDUCATIVO E INGENIERÍA</strong>
+          <p class="cajetin-desc">Lámina 06: Calculadora de escalas ISO 5455 y sistemas de acotación ISO 129-1.</p>
+        </div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">AUTOR / ESTUDIO</span><span class="cajetin-v mono">DPTO. DISEÑO &amp; CAD</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">ESCALA GENERAL</span><span class="cajetin-v mono">INTERACTIVA</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">FECHA / REV.</span><span class="cajetin-v mono">2026-11 · REV 05</span></div>
+        <div class="cajetin-cell cell-proj">
+          <span class="cajetin-k mono">SISTEMA DE PROYECCIÓN</span>
+          <div class="proj-symbol-row">
+            <svg viewBox="0 0 60 28" width="54" height="24" aria-label="Símbolo ISO-E">
+              <polygon points="6,8 22,3 22,25 6,20" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <span class="mono">ISO-E (EUROPEO)</span>
+          </div>
+        </div>
+        <div class="cajetin-cell cell-links">
+          <span class="cajetin-k mono">ÍNDICE DE LÁMINAS (PÁGINAS)</span>
+          <nav class="footer-nav mono" aria-label="Enlaces rápidos">
+            <a href="index.html">01. Inicio</a>
+            <a href="fundamentos.html">02. Fundamentos</a>
+            <a href="galeria.html">03. Galería</a>
+            <a href="historia.html">04. Historia</a>
+            <a href="aplicaciones.html">05. Aplicaciones</a>
+            <a href="escalas.html">06. Escalas</a>
+          </nav>
+        </div>
+        <div class="cajetin-cell cell-code">
+          <span class="cajetin-k mono">CÓDIGO DE PLANO</span>
+          <span class="cajetin-v mono">DT-A1-06-ESCA</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

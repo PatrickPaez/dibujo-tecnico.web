@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicaciones | DIBUJO·TÉCNICO — Industrias e Ingeniería</title>
+  <meta name="description" content="Aplicaciones del Dibujo Técnico en Ingeniería Mecánica, Arquitectura y Urbanismo, Ingeniería Civil y Topografía, y Electrónica." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="blueprint-grid" data-page="aplicaciones">
+  <div class="sheet-margin-top" aria-hidden="true">
+    <span class="coord-marker">A1 · ISO 5457</span>
+    <span class="coord-marker">LÁMINA 05 · APLICACIONES</span>
+    <span class="coord-marker">MEC · ARQ · CIV · ELC</span>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a href="index.html" class="brand" aria-label="Ir al inicio">
+        <span class="brand-symbol" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="32" height="32" fill="none">
+            <rect x="2" y="2" width="32" height="32" rx="3" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="6" stroke="currentColor" stroke-width="1.5" />
+            <circle cx="13" cy="18" r="2.5" stroke="currentColor" stroke-width="1.5" />
+            <polygon points="23,12 31,14.5 31,21.5 23,24" stroke="currentColor" stroke-width="1.5" />
+            <line x1="5" y1="18" x2="33" y2="18" stroke="var(--accent-amber)" stroke-width="1" stroke-dasharray="3 2" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">DIBUJO·TÉCNICO</span>
+          <span class="brand-sub mono">PLANIFICACIÓN &amp; CAD</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link" data-page="inicio"><span class="nav-idx mono">01.</span>Inicio</a></li>
+        <li><a href="fundamentos.html" class="nav-link" data-page="fundamentos"><span class="nav-idx mono">02.</span>Fundamentos</a></li>
+        <li><a href="galeria.html" class="nav-link" data-page="galeria"><span class="nav-idx mono">03.</span>Galería</a></li>
+        <li><a href="historia.html" class="nav-link" data-page="historia"><span class="nav-idx mono">04.</span>Historia</a></li>
+        <li><a href="aplicaciones.html" class="nav-link active" data-page="aplicaciones"><span class="nav-idx mono">05.</span>Aplicaciones</a></li>
+        <li><a href="escalas.html" class="nav-link" data-page="escalas"><span class="nav-idx mono">06.</span>Escalas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle mono" id="themeToggle" aria-label="Alternar tema">
+          <span class="theme-dot" aria-hidden="true"></span>
+          <span id="themeLabel">CAD DARK</span>
+        </button>
+        <button type="button" class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <div class="breadcrumb mono">
+          <a href="index.html">01. Inicio</a><span>/</span><span>05. Aplicaciones por Industria</span>
+        </div>
+        <div class="section-header" style="margin-bottom:0;">
+          <span class="section-eyebrow mono">// SECTORES PRODUCTIVOS Y NORMATIVA</span>
+          <h1 class="section-title">Aplicaciones del Dibujo Técnico</h1>
+          <p class="section-lead">
+            Cada rama de la ingeniería y la arquitectura adapta la geometría descriptiva, las escalas y la simbología normalizada a sus procesos constructivos. Explora las cuatro industrias principales.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- Pestañas interactivas con imagen + esquema SVG -->
+        <div class="apps-tabs-wrapper card-blueprint reveal">
+          <div class="corner-mark tl" aria-hidden="true"></div>
+          <div class="corner-mark tr" aria-hidden="true"></div>
+          <div class="corner-mark bl" aria-hidden="true"></div>
+          <div class="corner-mark br" aria-hidden="true"></div>
+
+          <div class="apps-tab-list" role="tablist" aria-label="Aplicaciones por industria">
+            <button type="button" class="app-tab active" data-app="mecanica" role="tab" aria-selected="true">
+              <span class="tab-code mono">IND·01</span>
+              <span class="tab-label">Ingeniería Mecánica e Industrial</span>
+            </button>
+            <button type="button" class="app-tab" data-app="arquitectura" role="tab" aria-selected="false">
+              <span class="tab-code mono">ARQ·02</span>
+              <span class="tab-label">Arquitectura y Urbanismo</span>
+            </button>
+            <button type="button" class="app-tab" data-app="civil" role="tab" aria-selected="false">
+              <span class="tab-code mono">CIV·03</span>
+              <span class="tab-label">Ingeniería Civil y Topografía</span>
+            </button>
+            <button type="button" class="app-tab" data-app="electronica" role="tab" aria-selected="false">
+              <span class="tab-code mono">ELC·04</span>
+              <span class="tab-label">Electrónica y Electricidad</span>
+            </button>
+          </div>
+
+          <div class="app-panel" id="appPanel" role="tabpanel"></div>
+        </div>
+
+        <!-- Cuadrícula visual resumen de las 4 ramas -->
+        <div class="apps-overview-grid">
+          <article class="sector-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <img src="assets/img/gallery-section.jpg" alt="Detalle mecánico en corte" class="media-img" />
+            <span class="pillar-code mono" style="align-self:flex-start;">MECÁNICA · ISO 1101</span>
+            <h3>Despieces, Tolerancias y Maquinaria</h3>
+            <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">
+              Garantiza la intercambiabilidad de componentes mediante tolerancias dimensionales, ajustes eje-agujero, roscas normalizadas y simbología de soldadura y rugosidad.
+            </p>
+          </article>
+
+          <article class="sector-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <img src="assets/img/gallery-truss.jpg" alt="Sección de cercha arquitectónica y estructural" class="media-img" />
+            <span class="pillar-code mono" style="align-self:flex-start;">ARQUITECTURA · ISO 7519</span>
+            <h3>Plantas, Alzados, Cortes y BIM</h3>
+            <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">
+              Coordina estructura, albañilería e instalaciones MEP en edificios y planeamiento urbano, pasando de vistas 2D acotadas a modelos digitales paramétricos BIM.
+            </p>
+          </article>
+
+          <article class="sector-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <img src="assets/img/app-civil-bridge.jpg" alt="Infraestructura civil y curvas de nivel" class="media-img" />
+            <span class="pillar-code mono" style="align-self:flex-start;">ING. CIVIL · TOPOGRAFÍA</span>
+            <h3>Curvas de Nivel, Puentes y Vías</h3>
+            <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">
+              Modela la altimetría del terreno mediante curvas de nivel, perfiles longitudinales y transversales para autopistas, túneles, presas y viaductos.
+            </p>
+          </article>
+
+          <article class="sector-card card-blueprint reveal">
+            <div class="corner-mark tl" aria-hidden="true"></div>
+            <div class="corner-mark br" aria-hidden="true"></div>
+            <img src="assets/img/gallery-pcb.jpg" alt="Diseño de placa electrónica PCB" class="media-img" />
+            <span class="pillar-code mono" style="align-self:flex-start;">ELECTRÓNICA · IEC 60617</span>
+            <h3>Esquemáticos y Placas PCB</h3>
+            <p style="margin:0; font-size:0.92rem; color:var(--text-secondary);">
+              Documenta conexiones eléctricas unifilares y circuitos impresos multicapa (archivos Gerber, huellas SMD, vías y máscaras antisoldante).
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="cajetin-sheet">
+        <div class="cajetin-cell cell-main">
+          <span class="cajetin-k mono">TÍTULO DEL PROYECTO</span>
+          <strong class="cajetin-v">DIBUJO TÉCNICO · PORTAL EDUCATIVO E INGENIERÍA</strong>
+          <p class="cajetin-desc">Lámina 05: Aplicaciones industriales en mecánica, arquitectura, obra civil y electrónica.</p>
+        </div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">AUTOR / ESTUDIO</span><span class="cajetin-v mono">DPTO. DISEÑO &amp; CAD</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">ESCALA GENERAL</span><span class="cajetin-v mono">MULTIDISCIPLINAR</span></div>
+        <div class="cajetin-cell"><span class="cajetin-k mono">FECHA / REV.</span><span class="cajetin-v mono">2026-11 · REV 05</span></div>
+        <div class="cajetin-cell cell-proj">
+          <span class="cajetin-k mono">SISTEMA DE PROYECCIÓN</span>
+          <div class="proj-symbol-row">
+            <svg viewBox="0 0 60 28" width="54" height="24" aria-label="Símbolo ISO-E">
+              <polygon points="6,8 22,3 22,25 6,20" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="10" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="42" cy="14" r="5" fill="none" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+            <span class="mono">ISO-E (EUROPEO)</span>
+          </div>
+        </div>
+        <div class="cajetin-cell cell-links">
+          <span class="cajetin-k mono">ÍNDICE DE LÁMINAS (PÁGINAS)</span>
+          <nav class="footer-nav mono" aria-label="Enlaces rápidos">
+            <a href="index.html">01. Inicio</a>
+            <a href="fundamentos.html">02. Fundamentos</a>
+            <a href="galeria.html">03. Galería</a>
+            <a href="historia.html">04. Historia</a>
+            <a href="aplicaciones.html">05. Aplicaciones</a>
+            <a href="escalas.html">06. Escalas</a>
+          </nav>
+        </div>
+        <div class="cajetin-cell cell-code">
+          <span class="cajetin-k mono">CÓDIGO DE PLANO</span>
+          <span class="cajetin-v mono">DT-A1-05-APLI</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
